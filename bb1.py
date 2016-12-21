@@ -1,0 +1,227 @@
+import requests
+import urllib2
+import urlparse
+import sys
+from bs4 import BeautifulSoup
+from PyQt5 import QtWidgets
+
+
+def get_next_target(page):
+    a_start_pos = page.find("<a href=")
+    if a_start_pos == -1:
+        return None,None, 0
+    id_start_pos = page.find("Course&id=", a_start_pos)
+    id_end_pos = page.find("&", id_start_pos+10)
+    courseid = page[id_start_pos+10:id_end_pos]
+
+    a_end_pos = page.find(">", a_start_pos+1)
+    title_start_pos = a_end_pos + 1
+    title_end_pos = page.find("</a>", title_start_pos+1)
+    coursename = page[title_start_pos:title_end_pos]
+    return coursename,courseid, title_end_pos
+
+def get_all_target(page):
+    p =[]
+    while True:
+        coursename,courseid,endpos = get_next_target(page)
+        if coursename:
+            p.append([coursename,courseid])
+            page = page[endpos:]
+        else:
+            break
+    return p
+
+
+class BB(object):
+    def __init__(self, session):
+        self.session = session
+
+    def getCourses(self):
+        # https://concordia.blackboard.com/webapps/portal/execute/tabs/tabAction?action=refreshAjaxModule&modId=_22_1&tabId=_2_1&tab_tab_group_id=_2_1
+        payload = {'action': 'refreshAjaxModule', 'modId': '_22_1', 'tabId': '_2_1', 'tab_tab_group_id':'_2_1'}
+        r = self.session.get("https://concordia.blackboard.com/webapps/portal/execute/tabs/tabAction",
+                             params = payload)
+        text =r.text.encode("utf-8")
+        text_start_pos = text.find("<ul")
+        text_end_pos = text.find("</ul")
+        text = text[text_start_pos:text_end_pos]
+
+        return get_all_target(text)
+        
+        #courses = get_all_target(text)
+        #with open("courseid.txt","w") as f:
+        #    f.writelines('%s\n' % '\t'.join(items) for items in courses)
+
+    def getContents(self, courseid):
+        payload_temp = {'course_id': courseid}
+        r_temp = self.session.get("https://concordia.blackboard.com/webapps/blackboard/content/courseMenu.jsp",
+                             params = payload_temp)
+        text_temp = r_temp.text.encode("utf-8")
+        # make sure it is Content menu
+        content_pos = text_temp.find('<span title="Content">Content</span>') # <span title="Content">Content</span>
+        cnt_start_pos = text_temp.find("content_id=", content_pos-180)         
+        cnt_end_pos = text_temp.find("&",cnt_start_pos)
+        cnt_id = text_temp[cnt_start_pos+11:cnt_end_pos]
+        #print cnt_id
+        payload = {'course_id': courseid, 'content_id': cnt_id, 'mode':'reset' }
+        r = self.session.get("https://concordia.blackboard.com/webapps/blackboard/content/listContentEditable.jsp",
+                             params = payload)
+        soup = BeautifulSoup(r.text,"html.parser")
+        links =[]
+        for li in soup.find(id="content_listContainer").findAll("li", recursive=False):
+            # if it is folder
+            if li.find("img")['src'][-13:] == 'folder_on.gif' and li.find("div").find("h3").find("a"):
+                wk = li.find("div").find("h3").find("a").find("span").contents[0] 
+                # get the Content ID from URL
+                contentid = self._getContentIdFromUrl(li.find("div").find("h3").find("a")['href'])
+                link = self.openFolder(courseid, contentid, wk)
+                if link:
+                    links.append(link)
+
+            # else if it is File, Test, Discussion,Dropbox ...
+        else:
+            name = u'\\'.join([unicode("ROOT"), 
+            unicode(li.find("div").find("h3").find("span",{"style":"color:#000000;"}).contents[0])])
+            #print name
+            page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
+            links2= self.get_all_links(page)
+            if links2:
+                links.append([name, links2])
+
+        return links
+
+    # this function has not used
+    def _getContentIdFromUrl(self, url):
+        link = urlparse.urlparse(url)
+        if link.path == "/webapps/blackboard/content/listContentEditable.jsp":
+            q = urlparse.parse_qs(link.query)
+            if q.has_key('content_id'):
+                return q['content_id'][0]
+        # if it is Folder link, need to find Redirect URL
+        elif link.path == "/webapps/blackboard/content/launchLink.jsp":
+            r = self.session.get("https://concordia.blackboard.com" + url, headers={'User-Agent': 'user_agent',})
+            linkNew = urlparse.urlparse(r.url)
+            q1 = urlparse.parse_qs(linkNew.query)
+            if q1.has_key('content_id'):
+                return q1['content_id'][0]
+        else:
+            return None
+
+
+    def openFolder(self,courseid, contentid, title):
+        try:
+            payload = {'course_id': courseid, 'content_id': contentid, 'mode':'reset'}
+            r = self.session.get("https://concordia.blackboard.com/webapps/blackboard/content/listContentEditable.jsp",
+                                params = payload)
+            soup = BeautifulSoup(r.text,"html.parser")
+
+            linksList = []
+            # if it is empty Folder return none
+            if soup.find(id="content_listContainer") == None:
+                return None
+
+            for li in soup.find(id="content_listContainer").findAll("li", recursive=False):
+                # if it is folder
+                if li.find("img")['src'][-13:] == 'folder_on.gif' and li.find("div").find("h3").find("a"):
+                    #--- if there are links under folder ----
+                    #if li.find("div",{"class":"vtbegenerated"}).find("a"):
+                    if li.find("div",{"class":"vtbegenerated"}):
+                        page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
+                        links= self.get_all_links(page)
+                        if links:
+                            linksList.append([name, links])
+                    wk = u'\\'.join([unicode(title), unicode(li.find("div").find("h3").find("a").find("span").contents[0])])                                
+                    contentid = self._getContentIdFromUrl(li.find("div").find("h3").find("a")['href'])
+                    linksList.append(self.openFolder(courseid, contentid, wk))
+                    #return self.openFolder(courseid, contentid, wk)
+
+                # if it is File
+                elif li.find("img")['src'][-15:] == 'document_on.gif':
+                    name = u'\\'.join([unicode(title), 
+                        unicode(li.find("div").find("h3").find("span",{"style":"color:#000000;"}).contents[0])])
+                    #print "File--",name
+                    page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
+                    links= self.get_all_links(page)
+                    if links:
+                        linksList.append([name, links])
+
+                # else if it is Test, Discussion, Dropbox ...
+                else:
+                    name = u'\\'.join([unicode(title), 
+                        unicode(li.find("div").find("h3").find("a").find("span").contents[0])])
+                    #print "Dropbox--", name
+                    page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
+                    links= self.get_all_links(page)
+                    if links:
+                        linksList.append([name, links])
+            if linksList:
+                return linksList
+                #print linksList
+
+        except Exception as e:
+            QtWidgets.QMessageBox.about(self, "URL Capture Excepion", e)
+
+        
+
+    def get_all_links(self, page):
+        urls =[]
+        while  True:
+            url, endpos = self.get_next_link(page)
+            if url:
+                urls.append(url)
+                page = page[endpos:]
+            else:
+                break
+        return urls
+
+    def get_next_link(self, page):
+        a_link = page.find('<a ')
+        start_link = page.find(' href="http', a_link+1)
+        if start_link ==  -1:
+            return None, 0
+        start_quote = page.find('"', start_link)
+        end_quote = page.find('"', start_quote + 1)
+        url = page[start_quote + 1: end_quote]
+        return url, end_quote
+
+    def urlStatus_code(self, url):
+        #-- flag = 0: No problem, 1: problem, 2: further check
+        try:
+            response = self.session.head(url, headers={'User-Agent': 'user_agent',})
+            if response.status_code == 200 or response.status_code == 403:
+                return response.status_code,"OK",0
+            elif response.status_code == 301 or response.status_code == 302:
+                #-- Checking "redirect" situation" ----- 
+                r2 = self.session.head(url, headers={'User-Agent': 'user_agent',}, allow_redirects=True)
+                if r2.status_code == 400 or r2.status_code == 404:
+                    return response.status_code, r2.status_code, 1
+                #-- if it is internal Blackborad link, pass  OR if it is PDF
+                if url.find("https://concordia.blackboard.com/") != -1 or r2.headers['Content-Type'] == 'application/pdf' or r2.headers['Content-Type'].find('image/') != -1:
+                    return response.status_code,"OK",0
+
+                r = self.session.get(r2.url,headers={'User-Agent': 'user_agent',}, stream=True) # stream makes it faster
+                soup = BeautifulSoup(r.text,"html.parser")
+
+                #-- if soup returns without TITLE ----
+                if soup.title == None:
+                    return response.status_code,"Redirection returns ABNORMAL content",2
+                if soup.title.string.lower().find('page not found') == -1:
+                    return response.status_code,soup.title.string,0
+                else:
+                    return response.status_code,"It is Page Not Found",1
+                    
+            elif response.status_code == 400 or response.status_code == 404:
+                return response.status_code,"Broken Links/Page Not Found",1
+            else:              
+                return response.status_code,None,2
+        except Exception as ex:
+            return 777,ex,2
+    
+
+
+
+
+
+                  
+                  
+            
