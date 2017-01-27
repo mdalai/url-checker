@@ -6,4 +6,4 @@ Checking urls in Blackboard
 3. pip install pandas
 4. pip install numpy
 5. pip install requests
-6. pip install webbrowser
+6. pip install webbrowser (sometimes, it is already included in the python basic)
