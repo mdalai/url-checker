@@ -64,7 +64,7 @@ class BB(object):
         cnt_id = text_temp[cnt_start_pos+11:cnt_end_pos]
         #print cnt_id
         payload = {'course_id': courseid, 'content_id': cnt_id, 'mode':'reset' }
-        r = self.session.get("https://concordia.blackboard.com/webapps/blackboard/content/listContentEditable.jsp",
+        r = self.session.get("https://concordia.blackboard.com/webapps/blackboard/content/listContent.jsp",
                              params = payload)
         soup = BeautifulSoup(r.text,"html.parser")
         links =[]
@@ -93,7 +93,7 @@ class BB(object):
     # this function has not used
     def _getContentIdFromUrl(self, url):
         link = urlparse.urlparse(url)
-        if link.path == "/webapps/blackboard/content/listContentEditable.jsp":
+        if link.path == "/webapps/blackboard/content/listContent.jsp":
             q = urlparse.parse_qs(link.query)
             if q.has_key('content_id'):
                 return q['content_id'][0]
@@ -111,7 +111,7 @@ class BB(object):
     def openFolder(self,courseid, contentid, title):
         try:
             payload = {'course_id': courseid, 'content_id': contentid, 'mode':'reset'}
-            r = self.session.get("https://concordia.blackboard.com/webapps/blackboard/content/listContentEditable.jsp",
+            r = self.session.get("https://concordia.blackboard.com/webapps/blackboard/content/listContent.jsp",
                                 params = payload)
             soup = BeautifulSoup(r.text,"html.parser")
 
