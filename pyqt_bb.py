@@ -1,7 +1,6 @@
 import sys
-#from PyQt5 import QtCore, QtGui, uic 
 from PyQt5 import QtWidgets, uic, QtCore, QtGui
-from bb1 import BB
+from bb1 import Blackboard
 import requests
 import pandas as pd
 import numpy as np
@@ -11,16 +10,6 @@ import webbrowser
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-
-def peelNestedList(link):
-  if type(link[0]) == type([]) and len(link) > 1:
-    for p in link:
-      peelNestedList(p)
-  else:
-      if type(link[0]) != type([]):
-        nameUrls.append([link[0],link[1]])
-      else:
-        peelNestedList(link[0])
 
 qtCreatorFile1 = "bb_urls.ui" # Enter file here.
 Ui_urlWindow , QtBaseClass = uic.loadUiType(qtCreatorFile1)
@@ -50,10 +39,13 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
 
         #-- create session --#
         self.session = requests.Session()
+        # initialize Blackboard class
+        self.bb = Blackboard(self.session)
 
+        # Login 
         self.pushButton_getCourses.clicked.connect(self.login)
-        self.pushButton_checkURLs.clicked.connect(self.checkURLs)    	
-
+        # Check URL
+        self.pushButton_checkURLs.clicked.connect(self.checkURLs)	
 
     def logout(self):
     	#print self.session.cookies.get_dict()
@@ -63,7 +55,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
     def login(self):
     	user = self.lineEdit_username.text()
     	pwd = self.lineEdit_pass.text()
-    	#print user,pwd
     	#-- Start Wait Curser -----------------------------------------------------------------
     	QtWidgets.QApplication.setOverrideCursor(QtGui.QCursor(QtCore.Qt.WaitCursor))
     	
@@ -80,11 +71,14 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
         try:
         	# make session for visiting blackboard site
         	r = self.session.post("https://concordia.blackboard.com/webapps/login/", data=payload)
-        	courses =[]        	
-        	bb = BB(self.session)
-        	courses = bb.getCourses()
+        	# Create a list to store all courses
+        	courses =[]
+        	# recall getCourses method from Blackboard Class
+        	courses = self.bb.getCourses()
       		if courses != []:
-      			print "success login!"
+      			print "Login Success!"
+
+      		# Use TableWidget to show course list
        		self.tableWidget_courses.setColumnCount(2)
        		self.tableWidget_courses.setRowCount(len(courses))
        		self.tableWidget_courses.setHorizontalHeaderLabels(['Courses Name', 'Courses ID'])
@@ -93,62 +87,16 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
        			self.tableWidget_courses.setItem(i, 0, QtWidgets.QTableWidgetItem(p[0]))
        			self.tableWidget_courses.setItem(i, 1, QtWidgets.QTableWidgetItem(p[1]))
        			i = i+1
-
         	self.tableWidget_courses.resizeColumnsToContents()     	        	
 
         except Exception as e:
         	print e
-        	QtWidgets.QMessageBox.about(self, "My message box", "Server Exception! please try again!!" )
+        	QtWidgets.QMessageBox.about(self, "Warning message box", "Server Exception! please try again!!" )
 
         #-- End Wait Curser -----------------------------------------------------------------
         QtWidgets.QApplication.restoreOverrideCursor() 
 
-    def checkURLs(self):
-    	#-- inner function for solving nested list
-    	def peelNestedList(link):
-            if type(link[0]) == type([]) and len(link) > 1:
-                for p in link:
-                    peelNestedList(p)
-            else:
-    			if type(link[0]) != type([]):
-    				nameUrls.append([link[0],link[1]])
-    			else:
-    				peelNestedList(link[0])
-    	#-- Check YOUTUBE URLs 
-    	def youtubeStatus(url):
-    		if url.find("v=") != -1:
-    			start_pos = url.find("v=") + 2
-    			end_pos = url.find("&", start_pos)
-    			if end_pos == -1:
-    				end_pos = url.find("#", start_pos)
-    				if end_pos == -1:
-    					youtube_id = url[start_pos:]
-    				else:
-    					youtube_id = url[start_pos:end_pos]
-    			else:
-    				youtube_id = url[start_pos:end_pos]
-    		elif url.find(".be/") != -1:
-    			start_pos = url.find(".be/") + 4
-    			end_pos = url.find("?", start_pos)
-                        if end_pos == -1:
-                            youtube_id = url[start_pos:]
-                        else:
-                            youtube_id = url[start_pos:end_pos]
-                else:
-                    return "Youtube Channel"
-
-    		#print youtube_id
-    		try:
-    			urlAPI = "https://www.googleapis.com/youtube/v3/videos?part=status&id=%s&key=AIzaSyAOBqTeqHaI1JTXzJNfQOzZZ-rMGmALHBw"%youtube_id
-    			response = urllib.urlopen(urlAPI)
-    			result = json.loads(response.read())
-    			if result["items"] == []:
-    				return "UNAVAILABLE"
-    			else:
-    				return result['items'][0]['status']['uploadStatus']
-    		except Exception, e:
-    			return "EXCEPTION"    	
-    	
+    def checkURLs(self):    	
     	row = self.tableWidget_courses.currentRow()
         #print row
         if row == -1:
@@ -164,8 +112,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
     	QtWidgets.QApplication.setOverrideCursor(QtGui.QCursor(QtCore.Qt.WaitCursor))
     	
     	#print course_id
-    	bb = BB(self.session)
-    	links = bb.getContents(course_id)
+    	links = self.bb.getURLs(course_id)
     	#---------- Test Start ---------------------------------
     	#with open('urlTest.txt', 'rb') as f:
     	#	links = pickle.load(f)
@@ -180,44 +127,41 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
     	#---------- Test End ---------------------------------
         #print links
         if links == []:
-            QtWidgets.QMessageBox.about(self, "My message box", "Returns no links. Please close the whole program and restry it." )
+            QtWidgets.QMessageBox.about(self, "My message box", "Returns no link. Please check the CONTENT in the Blackboard!!" )
             return
         #with open('linksTest.txt', 'wb') as f:
         #    pickle.dump(links, f)
 
-    	nameUrls = []
-    	for link in links:
-            if link == [None]:
-                continue
-            peelNestedList(link)
-
-
+        # ----- Check the URL responses and keep data into Panda DF ---------------------------------
     	df = pd.DataFrame(columns=('Location','URL','Status_code','Remark','flag'))
-    	for urls in nameUrls:
-    		for url in urls[1]:
-    			if url.find("youtube.com") == -1 and url.find("youtu.be/") == -1:
-                                #print url                            
-    				status_code, comment, flag = bb.urlStatus_code(url)
-    				df = pd.DataFrame(np.array([[urls[0], url, status_code, comment, flag]]),
-            			columns=['Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
-    			else:
-    				flag = 1
-    				r = requests.head(url, headers={'User-Agent': 'user_agent',})
-    				if r.status_code != 404:
-    					status = youtubeStatus(url)
-    					if status == "processed" or status == "Youtube Channel":
-    						flag = 0
-    					elif status == "UNAVAILABLE" or status == "EXCEPTION":
-    						flag = 2
-    					else:
-    						flag = 1
+    	for urls in links:
+    	  for url in urls[1]:
+            if url.find("youtube.com") == -1 and url.find("youtu.be/") == -1:          
+              #print url                            
+    	      status_code, comment, flag = self.bb.urlStatus_code(url)
+    	      df = pd.DataFrame(np.array([[urls[0], url, status_code, comment, flag]]),
+              columns=['Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
+    	    else:
+    	      flag = 1
+    	      r = requests.head(url, headers={'User-Agent': 'user_agent',})
+    	      if r.status_code != 404:
+    		status = self.bb.youtubeStatus(url)
+    		if status == "processed" or status == "Youtube Channel":
+    		  flag = 0
+    		elif status == "UNAVAILABLE" or status == "EXCEPTION":
+    		  flag = 2
+    		else:
+    		  flag = 1
 
-    				else:
-    					status = "YOUTUBE Not Found"
-    				df = pd.DataFrame(np.array([[urls[0], url, r.status_code, status, flag]]),
-            			columns=['Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
+    	      else:
+    		  status = "YOUTUBE Not Found"
+    	      df = pd.DataFrame(np.array([[urls[0], url, r.status_code, status, flag]]),
+              columns=['Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
 
+    	#---- Reverse DF order
+    	df = df.iloc[::-1]
 
+    	#----- Show the data of DF into a TableWidget ---------------
     	url_window.tableWidget_urls.setColumnCount(len(df.columns))
     	url_window.tableWidget_urls.setRowCount(len(df.index))
     	url_window.tableWidget_urls.setHorizontalHeaderLabels(['Location','URL','Status_code','Remark','flag'])
@@ -242,8 +186,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
         # if Pandas Dataframe is not empty, save to a csv file
         if not df.empty:
           df.to_csv(course_id +'.csv', encoding='utf-8')
-
-
 
 
 if __name__ == "__main__":
