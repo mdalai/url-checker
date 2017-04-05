@@ -32,12 +32,15 @@ It mainly extract status_code of URL. In order to make the URL response faster, 
 ### def youtubeStatus
 1. Extract Youtube ID from URL.
 2. Apply Google API for Youtube. You have to apply Google API Key first. 
-  - [Guide](https://developers.google.com/youtube/v3/getting-started), [Video Guide](https://www.youtube.com/watch?v=-UCHsqxBqwY)
+   - [Guide](https://developers.google.com/youtube/v3/getting-started), [Video Guide](https://www.youtube.com/watch?v=-UCHsqxBqwY)
 3. Use https://www.googleapis.com/youtube/v3/videos?part=status&id=[outube ID]&key=[your api key] to extract json which include all the detail info of Youtube URL status.
 
 
 ### Store URLs into Pandas DataFrame
-
+In order to keep the URL status info, I decided to use Pandas DataFrame. In addition, it gives a possibility of data analysis afterwards.
+1. Reverse DataFrame data order. The data are stored in reverse order. Therefore, it is better to correct it.
+2. Adopted tableWidet to show the data. I used backgroud color to make it more clear. Red color means these URLs are broken. Orange color mean it is better to further check by double clicking the link.
+3. save it as CSV file.
 # Notes
  - Make sure the course list in your Blackboard are NOT 'Group by Term'. 
  - Before running the program, make sure the 'Edit Mode is:' OFF.
