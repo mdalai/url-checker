@@ -5,7 +5,6 @@ import requests
 import pandas as pd
 import numpy as np
 import pickle
-import urllib, json
 import webbrowser
 
 reload(sys)
@@ -116,18 +115,17 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
     	#---------- Test Start ---------------------------------
     	#with open('urlTest.txt', 'rb') as f:
     	#	links = pickle.load(f)
-    	'''links = [['root',['http://www.onlinejcf.com/article/S1071-9164%2816%2930550-4/pdf',
-                           'http://www.onlinejcf.com/article/S1071-9164(10)00174-0/fulltext',
-                           'http://www.pbs.org/wgbh/pages/frontline/the-spill/']],
-                ['test1',['http://www.dfwhcfoundation.org/wp-content/uploads/2013/10/Cultural-and-linguistic-competence-in-Patient-care_Sushma-Sharma-1.jpg',
-                          'https://www.youtube.com/user/WhiteHouseAAPI',
-                          'https://en-us.help.blackboard.com/Learn/9.1_2014_04/Instructor/100_Assignments/025_Use_SafeAssign/010_SafeAssign_Originality_Reports']]
-                ] '''
+    	'''links = [['root',['https://www.youtube.com/watch?v=YdtLELVhEQg',
+                           'https://www.youtube.com/watch?v=esPRsT-lmw8',
+                           'http://youtu.be/sRc9Noz80ko']]
+                ]'''
 
     	#---------- Test End ---------------------------------
         #print links
         if links == []:
             QtWidgets.QMessageBox.about(self, "My message box", "Returns no link. Please check the CONTENT in the Blackboard!!" )
+            # has to close the wait curser, otherwise it will keep showing the curser that is running.
+            QtWidgets.QApplication.restoreOverrideCursor()
             return
         #with open('linksTest.txt', 'wb') as f:
         #    pickle.dump(links, f)

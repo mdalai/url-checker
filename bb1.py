@@ -4,6 +4,7 @@ import urlparse
 import sys
 from bs4 import BeautifulSoup
 from PyQt5 import QtWidgets
+import urllib, json
 
 
 class Blackboard(object):
@@ -260,6 +261,7 @@ class Blackboard(object):
     	    else:
     		return result['items'][0]['status']['uploadStatus']
     	except Exception, e:
+            #print e
     	    return "EXCEPTION"  
     
 
