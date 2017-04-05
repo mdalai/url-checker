@@ -50,5 +50,6 @@ In order to keep the URL status info, I decided to use Pandas DataFrame. In addi
 2. Adopted tableWidet to show the data. I used backgroud color to make it more clear. Red color means these URLs are broken. Orange color mean it is better to further check by double clicking the link.
 3. save it as CSV file.
 # Notes
+ - Make sure you have enrolled in the course you want to check URLs.
  - Make sure the course list in your Blackboard are NOT 'Group by Term'. 
  - Before running the program, make sure the 'Edit Mode is:' OFF.
