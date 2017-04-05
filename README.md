@@ -7,6 +7,11 @@ Checking urls in Blackboard
 4. pip install numpy
 5. pip install requests
 6. pip install webbrowser (sometimes, it is already included in the python basic)
+# Run the program
+1. Double click "pyqt_bb.py" will start the program. Then input your Blackboard username and password, click 'Load Courses' button. From the course list choose a course you want to check URLs, then click 'Check URLs' button. The new window will be openned and list out all the URLs and statuses. It may take longer time if the course has many URLs.
+2. Or you can run the program on the command line. 
+  - python pyqt_bb.py
+  
 # Revealing Programming Process
 ## Login
 
