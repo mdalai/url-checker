@@ -200,14 +200,10 @@ class Blackboard(object):
                 return response.status_code,"OK",0
             elif response.status_code == 301 or response.status_code == 302:
                 #-- Checking "redirect" situation" ----- 
-                r2 = self.session.head(url, headers={'User-Agent': 'user_agent',}, allow_redirects=True)
-                if r2.status_code == 400 or r2.status_code == 404:
-                    return response.status_code, r2.status_code, 1
-                #-- if it is internal Blackborad link, pass  OR if it is PDF
-                if url.find("https://concordia.blackboard.com/") != -1 or r2.headers['Content-Type'] == 'application/pdf' or r2.headers['Content-Type'].find('image/') != -1:
+                if url.find("https://concordia.blackboard.com/") != -1 or response.headers['Content-Type'] == 'application/pdf' or response.headers['Content-Type'].find('image/') != -1:
                     return response.status_code,"OK",0
 
-                r = self.session.get(r2.url,headers={'User-Agent': 'user_agent',}, stream=True) # stream makes it faster
+                r = self.session.get(response.url,headers={'User-Agent': 'user_agent',}, stream=True) # stream makes it faster
                 soup = BeautifulSoup(r.text,"html.parser")
 
                 #-- if soup returns without TITLE ----
@@ -218,7 +214,7 @@ class Blackboard(object):
                 else:
                     return response.status_code,"It is Page Not Found",1
                     
-            elif response.status_code == 400 or response.status_code == 404:
+            elif response.status_code == 400 or response.status_code == 404 or response.status_code == 410:
                 return response.status_code,"Broken Links/Page Not Found",1
             else:              
                 return response.status_code,None,2

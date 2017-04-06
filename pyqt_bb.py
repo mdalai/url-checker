@@ -121,7 +121,6 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
                 ]'''
 
     	#---------- Test End ---------------------------------
-        #print links
         if links == []:
             QtWidgets.QMessageBox.about(self, "My message box", "Returns no link. Please check the CONTENT in the Blackboard!!" )
             # has to close the wait curser, otherwise it will keep showing the curser that is running.
@@ -134,8 +133,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
     	df = pd.DataFrame(columns=('Location','URL','Status_code','Remark','flag'))
     	for urls in links:
     	  for url in urls[1]:
-            if url.find("youtube.com") == -1 and url.find("youtu.be/") == -1:          
-              #print url                            
+            if url.find("youtube.com") == -1 and url.find("youtu.be/") == -1:                                    
     	      status_code, comment, flag = self.bb.urlStatus_code(url)
     	      df = pd.DataFrame(np.array([[urls[0], url, status_code, comment, flag]]),
               columns=['Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
@@ -155,6 +153,7 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
     		  status = "YOUTUBE Not Found"
     	      df = pd.DataFrame(np.array([[urls[0], url, r.status_code, status, flag]]),
               columns=['Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
+
 
     	#---- Reverse DF order
     	df = df.iloc[::-1]
