@@ -249,7 +249,7 @@ class Blackboard(object):
 
     	#print youtube_id
     	try:
-    	    urlAPI = "https://www.googleapis.com/youtube/v3/videos?part=status&id=%s&key=AIzaSyAOBqTeqHaI1JTXzJNfQOzZZ-rMGmALHBw"%youtube_id
+    	    urlAPI = "https://www.googleapis.com/youtube/v3/videos?part=status&id=%s&key=[YOUR-API-KEY]"%youtube_id
     	    response = urllib.urlopen(urlAPI)
     	    result = json.loads(response.read())
     	    if result["items"] == []:

@@ -8,6 +8,7 @@ import pickle
 
 import bb_login
 from file_io import appendDFToCSV
+from url_status import youtubeStatus,getYoutubeID,checkUrlStatus
 import datetime
 
 reload(sys)
@@ -138,22 +139,27 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
                 for urls in links:
                     for url in urls[1]:
                         if url.find("youtube.com") == -1 and url.find("youtu.be/") == -1:
-                            status_code, comment, flag = self.bb.urlStatus_code(url)
+                            #status_code, comment, flag = self.bb.urlStatus_code(url)
+                            status_code, comment, flag = checkUrlStatus(url,self.session)
     	                    df = pd.DataFrame(np.array([[course_name,urls[0], url, status_code, comment, flag]]),
                                               columns=['Course','Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
     	                else:
                             flag = 1
                             r = requests.head(url, headers={'User-Agent': 'user_agent',})
                             if r.status_code != 404:
-                                status = self.bb.youtubeStatus(url)
-                                if status == "processed" or status == "Youtube Channel":
+                                y_id = getYoutubeID(url)
+                                if y_id == "youtube_channel":
                                     flag = 0
-                                elif status == "UNAVAILABLE" or status == "EXCEPTION":
-                                    flag = 2
                                 else:
-                                    flag = 1
+                                    status,_,_ = youtubeStatus(y_id)
+                                    if status == "processed":
+                                        flag = 0
+                                    elif status == None or status == 0:
+                                        flag = 2
+                                    else:
+                                        flag = 1
                             else:
-                                status = "YOUTUBE Not Found"
+                                status = "YOUTUBE NOT Found"
                             df = pd.DataFrame(np.array([[course_name,urls[0], url, r.status_code, status, flag]]),
                                               columns=['Course','Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
 
@@ -178,6 +184,9 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
 
                 # Print the process
                 print "[%s/%s]>>>%s>>>IS DONE"%(row_index+1,rowCount,course_name)
+
+            else:
+                print ">>>%s>>>has no links!"%course_name
                                   
 
                 

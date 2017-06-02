@@ -5,7 +5,7 @@ import sys
 from bs4 import BeautifulSoup
 from PyQt5 import QtWidgets
 import urllib, json
-from get_targats_html import get_course_and_id,get_next_course_and_id
+from get_targats_html import get_course_and_id,get_next_course_and_id,get_all_links,get_next_link
 
 
 class Blackboard(object):
@@ -68,7 +68,7 @@ class Blackboard(object):
                 unicode(li.find("div").find("h3").find("span",{"style":"color:#000000;"}).contents[0])])
                 #print name
                 page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
-                links2= self.get_all_links(page)
+                links2= get_all_links(page)
                 if links2:
                     self.urlList.append([name, links2])
 
@@ -111,7 +111,7 @@ class Blackboard(object):
                     wk = u'\\'.join([unicode(title), unicode(li.find("div").find("h3").find("a").find("span").contents[0])]) 
                     if li.find("div",{"class":"vtbegenerated"}):
                         page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
-                        links= self.get_all_links(page)
+                        links= get_all_links(page)
                         if links:
                             self.urlList.append([wk, links])
                                
@@ -126,7 +126,7 @@ class Blackboard(object):
                         unicode(li.find("div").find("h3").find("span",{"style":"color:#000000;"}).contents[0])])
                     #print "File--",name
                     page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
-                    links= self.get_all_links(page)
+                    links= get_all_links(page)
                     if links:
                         self.urlList.append([name, links])
 
@@ -136,7 +136,7 @@ class Blackboard(object):
                         unicode(li.find("div").find("h3").find("a").find("span").contents[0])])
                     #print "Dropbox--", name
                     page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
-                    links= self.get_all_links(page)
+                    links= get_all_links(page)
                     if links:
                         self.urlList.append([name, links])
             #if linksList:
@@ -147,100 +147,6 @@ class Blackboard(object):
             QtWidgets.QMessageBox.about(self, "URL Capture Excepion", e)
 
         
-
-    def get_all_links(self, page):
-        urls =[]
-        while  True:
-            url, endpos = self.get_next_link(page)
-            if url:
-                urls.append(url)
-                page = page[endpos:]
-            else:
-                break
-        return urls
-
-    def get_next_link(self, page):
-        a_link = page.find('<a ')
-        start_link = page.find(' href="', a_link+1) #http
-        if start_link ==  -1:
-            return None, 0
-        start_quote = page.find('"', start_link)
-        end_quote = page.find('"', start_quote + 1)
-        url = page[start_quote + 1: end_quote]
-        return url, end_quote
-
-    ## -----  3. check URL list --------------------------------------
-    def urlStatus_code(self, url):
-        #-- flag = 0: No problem, 1: problem, 2: further check
-        try:
-            response = self.session.head(url, headers={'User-Agent': 'user_agent',})
-            if response.status_code == 200 or response.status_code == 403:
-                return response.status_code,"OK",0
-            elif response.status_code == 301 or response.status_code == 302:
-                #-- Checking "redirect" situation" ----- 
-                if url.find("https://concordia.blackboard.com/") != -1 or response.headers['Content-Type'] == 'application/pdf' or response.headers['Content-Type'].find('image/') != -1:
-                    return response.status_code,"OK",0
-
-                r = self.session.get(response.url,headers={'User-Agent': 'user_agent',}, stream=True) # stream makes it faster
-                soup = BeautifulSoup(r.text,"html.parser")
-
-                #-- if soup returns without TITLE ----
-                if soup.title == None:
-                    return response.status_code,"Redirection returns ABNORMAL content",2
-                if soup.title.string.lower().find('page not found') == -1:
-                    return response.status_code,soup.title.string,0
-                else:
-                    return response.status_code,"It is Page Not Found",1
-                    
-            elif response.status_code == 400 or response.status_code == 404 or response.status_code == 410:
-                return response.status_code,"Broken Links/Page Not Found",1
-            else:              
-                return response.status_code,None,2
-        except Exception as ex:
-            return 777,ex,2
-
-
-
-    #-- Check YOUTUBE URLs 
-    def youtubeStatus(self,url):
-        
-        if url.find("v=") != -1:
-            start_pos = url.find("v=") + 2
-    	    end_pos = url.find("&", start_pos)
-    	    if end_pos == -1:
-    		end_pos = url.find("#", start_pos)
-    		if end_pos == -1:
-    		    youtube_id = url[start_pos:]
-    		else:
-    		    youtube_id = url[start_pos:end_pos]
-    	    else:
-    		youtube_id = url[start_pos:end_pos]
-    	elif url.find(".be/") != -1:
-    	    start_pos = url.find(".be/") + 4
-    	    end_pos = url.find("?", start_pos)
-            if end_pos == -1:
-                youtube_id = url[start_pos:]
-            else:
-                youtube_id = url[start_pos:end_pos]
-        else:
-            return "Youtube Channel"
-
-    	#print youtube_id
-    	try:
-    	    urlAPI = "https://www.googleapis.com/youtube/v3/videos?part=status&id=%s&key=AIzaSyAOBqTeqHaI1JTXzJNfQOzZZ-rMGmALHBw"%youtube_id
-    	    response = urllib.urlopen(urlAPI)
-    	    result = json.loads(response.read())
-    	    if result["items"] == []:
-    		return "UNAVAILABLE"
-    	    else:
-    		return result['items'][0]['status']['uploadStatus']
-    	except Exception, e:
-            #print e
-    	    return "EXCEPTION"  
-    
-
-
-
 
 
                   

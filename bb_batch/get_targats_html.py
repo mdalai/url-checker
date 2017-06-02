@@ -26,3 +26,26 @@ def get_next_course_and_id(page):
     title_end_pos = page.find("</a>", title_start_pos+1)
     coursename = page[title_start_pos:title_end_pos]
     return coursename,courseid,title_end_pos
+
+
+
+def get_all_links(page):
+    urls =[]
+    while  True:
+        url, endpos = get_next_link(page)
+        if url:
+            urls.append(url)
+            page = page[endpos:]
+        else:
+            break
+    return urls
+
+def get_next_link(page):
+    a_link = page.find('<a ')
+    start_link = page.find(' href="http', a_link+1) #http will exclude # button
+    if start_link ==  -1:
+        return None, 0
+    start_quote = page.find('"', start_link)
+    end_quote = page.find('"', start_quote + 1)
+    url = page[start_quote + 1: end_quote]
+    return url, end_quote
