@@ -1,0 +1,240 @@
+2017-06-19 14:26:48,887 INFO     [1/23]>>>AL-128_I_12-18-2014: AL-128 I P College Algebra 03-26-2015>>>IS DONE
+2017-06-19 14:26:49,134 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_9691_1 HTTP/1.1" 200 14968
+2017-06-19 14:26:49,566 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9691_1&content_id=_58876_1&mode=reset HTTP/1.1" 200 21552
+2017-06-19 14:26:49,918 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9691_1&content_id=_58885_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:26:50,279 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9691_1&content_id=_58902_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:26:50,638 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9691_1&content_id=_58912_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:26:51,055 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9691_1&content_id=_58923_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:26:51,411 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9691_1&content_id=_58937_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:26:51,762 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9691_1&content_id=_58947_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:26:52,114 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9691_1&content_id=_58957_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:26:52,407 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9691_1&content_id=_58968_1&mode=reset HTTP/1.1" 200 24123
+2017-06-19 14:26:52,536 INFO     [2/23]>>>AL-136_I_08-27-2014: AL-136 I  P Literary visions 03-26-2015>>>IS DONE
+2017-06-19 14:26:52,898 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_9693_1 HTTP/1.1" 200 14965
+2017-06-19 14:26:53,336 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9693_1&content_id=_58981_1&mode=reset HTTP/1.1" 200 21623
+2017-06-19 14:26:53,638 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9693_1&content_id=_58990_1&mode=reset HTTP/1.1" 200 25417
+2017-06-19 14:26:53,887 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9693_1&content_id=_58997_1&mode=reset HTTP/1.1" 200 24172
+2017-06-19 14:26:54,125 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9693_1&content_id=_59001_1&mode=reset HTTP/1.1" 200 23781
+2017-06-19 14:26:54,414 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9693_1&content_id=_59005_1&mode=reset HTTP/1.1" 200 25125
+2017-06-19 14:26:54,713 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9693_1&content_id=_59013_1&mode=reset HTTP/1.1" 200 25090
+2017-06-19 14:26:54,960 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9693_1&content_id=_59018_1&mode=reset HTTP/1.1" 200 23140
+2017-06-19 14:26:55,200 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9693_1&content_id=_59022_1&mode=reset HTTP/1.1" 200 24531
+2017-06-19 14:26:55,467 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9693_1&content_id=_59027_1&mode=reset HTTP/1.1" 200 22981
+2017-06-19 14:26:55,568 INFO     [3/23]>>>AL-152_I_08-27-2014: AL-152 I P Computer Communication 03-26-2015>>>IS DONE
+2017-06-19 14:26:55,980 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_10504_1 HTTP/1.1" 200 14956
+2017-06-19 14:26:56,486 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_10504_1&content_id=_80153_1&mode=reset HTTP/1.1" 200 23002
+2017-06-19 14:26:56,680 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_10504_1&content_id=_121172_1&mode=reset HTTP/1.1" 200 20511
+2017-06-19 14:26:56,946 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_10504_1&content_id=_80163_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:26:57,266 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_10504_1&content_id=_80167_1&mode=reset HTTP/1.1" 200 22893
+2017-06-19 14:26:57,535 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_10504_1&content_id=_80169_1&mode=reset HTTP/1.1" 200 23652
+2017-06-19 14:26:57,857 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_10504_1&content_id=_80171_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:26:58,137 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_10504_1&content_id=_80173_1&mode=reset HTTP/1.1" 200 24179
+2017-06-19 14:26:58,384 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_10504_1&content_id=_80175_1&mode=reset HTTP/1.1" 200 23375
+2017-06-19 14:26:58,486 INFO     [4/23]>>>AL-153_I_01-26-2015: AL-153/JPP-312 I P Forensic Science Criminalistics 201530>>>IS DONE
+2017-06-19 14:26:58,812 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_9698_1 HTTP/1.1" 200 14952
+2017-06-19 14:26:59,219 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9698_1&content_id=_59114_1&mode=reset HTTP/1.1" 200 21550
+2017-06-19 14:26:59,592 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9698_1&content_id=_59122_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:00,015 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9698_1&content_id=_59131_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:00,371 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9698_1&content_id=_59139_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:00,723 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9698_1&content_id=_59148_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:01,063 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9698_1&content_id=_59158_1&mode=reset HTTP/1.1" 200 25040
+2017-06-19 14:27:01,407 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9698_1&content_id=_59167_1&mode=reset HTTP/1.1" 200 25200
+2017-06-19 14:27:01,746 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9698_1&content_id=_59176_1&mode=reset HTTP/1.1" 200 25482
+2017-06-19 14:27:02,315 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_9698_1&content_id=_59185_1&mode=reset HTTP/1.1" 200 25358
+2017-06-19 14:27:02,424 INFO     [5/23]>>>AL-159_I_08-27-2014: AL-159 I P Heritage of Faith 03-26-2015>>>IS DONE
+2017-06-19 14:27:02,642 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_14145_1 HTTP/1.1" 200 11050
+2017-06-19 14:27:03,000 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_14145_1&content_id=_158287_1&mode=reset HTTP/1.1" 200 16289
+2017-06-19 14:27:03,351 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_14145_1&content_id=_158292_1&mode=reset HTTP/1.1" 200 21965
+2017-06-19 14:27:03,684 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_14145_1&content_id=_158295_1&mode=reset HTTP/1.1" 200 19543
+2017-06-19 14:27:03,984 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_14145_1&content_id=_158297_1&mode=reset HTTP/1.1" 200 20288
+2017-06-19 14:27:04,361 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_14145_1&content_id=_158299_1&mode=reset HTTP/1.1" 200 21459
+2017-06-19 14:27:04,716 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_14145_1&content_id=_158301_1&mode=reset HTTP/1.1" 200 20170
+2017-06-19 14:27:05,082 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_14145_1&content_id=_158303_1&mode=reset HTTP/1.1" 200 20466
+2017-06-19 14:27:05,171 INFO     [6/23]>>>AL-266_I_06-15-2015: AL-266 I P Staffing 06-15-2015>>>IS DONE
+2017-06-19 14:27:05,506 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_21839_1 HTTP/1.1" 200 11111
+2017-06-19 14:27:05,894 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_21839_1&content_id=_503999_1&mode=reset HTTP/1.1" 200 16461
+2017-06-19 14:27:06,165 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_21839_1&content_id=_508552_1&mode=reset HTTP/1.1" 200 18662
+2017-06-19 14:27:06,428 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_21839_1&content_id=_508556_1&mode=reset HTTP/1.1" 200 19668
+2017-06-19 14:27:06,696 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_21839_1&content_id=_508560_1&mode=reset HTTP/1.1" 200 20592
+2017-06-19 14:27:07,003 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_21839_1&content_id=_508564_1&mode=reset HTTP/1.1" 200 20215
+2017-06-19 14:27:07,220 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_21839_1&content_id=_508573_1&mode=reset HTTP/1.1" 200 17313
+2017-06-19 14:27:07,490 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_21839_1&content_id=_508576_1&mode=reset HTTP/1.1" 200 20878
+2017-06-19 14:27:07,571 INFO     [7/23]>>>AL-295_I_06-13-2016: AL-295 I P Introduction to Six Sigma 201710>>>IS DONE
+2017-06-19 14:27:07,894 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_34295_1 HTTP/1.1" 200 14923
+2017-06-19 14:27:08,323 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_763832_1&mode=reset HTTP/1.1" 200 21775
+2017-06-19 14:27:08,703 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785370_1&mode=reset HTTP/1.1" 200 25314
+2017-06-19 14:27:09,125 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785378_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:09,503 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785381_1&mode=reset HTTP/1.1" 200 21642
+2017-06-19 14:27:09,802 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785391_1&mode=reset HTTP/1.1" 200 21195
+2017-06-19 14:27:10,092 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785392_1&mode=reset HTTP/1.1" 200 21241
+2017-06-19 14:27:10,471 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785402_1&mode=reset HTTP/1.1" 200 21490
+2017-06-19 14:27:11,756 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785403_1&mode=reset HTTP/1.1" 200 21173
+2017-06-19 14:27:13,020 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785410_1&mode=reset HTTP/1.1" 200 21087
+2017-06-19 14:27:14,107 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785393_1&mode=reset HTTP/1.1" 200 21184
+2017-06-19 14:27:14,490 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785394_1&mode=reset HTTP/1.1" 200 21128
+2017-06-19 14:27:14,723 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785395_1&mode=reset HTTP/1.1" 200 21137
+2017-06-19 14:27:14,990 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785396_1&mode=reset HTTP/1.1" 200 21214
+2017-06-19 14:27:15,415 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785424_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:16,036 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785428_1&mode=reset HTTP/1.1" 200 22116
+2017-06-19 14:27:16,502 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785449_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:16,845 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785459_1&mode=reset HTTP/1.1" 200 24608
+2017-06-19 14:27:17,263 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785464_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:17,782 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785471_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:18,226 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34295_1&content_id=_785480_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:18,375 INFO     [8/23]>>>11633-201810: Assessment for Learning EDG 887 DL1 11633-201810>>>IS DONE
+2017-06-19 14:27:18,644 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_34296_1 HTTP/1.1" 200 14930
+2017-06-19 14:27:19,026 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_763834_1&mode=reset HTTP/1.1" 200 21781
+2017-06-19 14:27:19,407 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785499_1&mode=reset HTTP/1.1" 200 25324
+2017-06-19 14:27:19,851 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785507_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:20,237 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785510_1&mode=reset HTTP/1.1" 200 21644
+2017-06-19 14:27:20,502 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785520_1&mode=reset HTTP/1.1" 200 21209
+2017-06-19 14:27:20,760 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785521_1&mode=reset HTTP/1.1" 200 21249
+2017-06-19 14:27:21,115 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785531_1&mode=reset HTTP/1.1" 200 21498
+2017-06-19 14:27:21,357 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785532_1&mode=reset HTTP/1.1" 200 21181
+2017-06-19 14:27:21,569 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785539_1&mode=reset HTTP/1.1" 200 21099
+2017-06-19 14:27:21,819 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785522_1&mode=reset HTTP/1.1" 200 21195
+2017-06-19 14:27:22,108 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785523_1&mode=reset HTTP/1.1" 200 21144
+2017-06-19 14:27:22,335 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785524_1&mode=reset HTTP/1.1" 200 21155
+2017-06-19 14:27:22,595 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785525_1&mode=reset HTTP/1.1" 200 21223
+2017-06-19 14:27:23,025 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785553_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:23,628 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785557_1&mode=reset HTTP/1.1" 200 22116
+2017-06-19 14:27:24,108 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785578_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:24,441 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785588_1&mode=reset HTTP/1.1" 200 24994
+2017-06-19 14:27:24,851 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785593_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:25,354 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785600_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:25,750 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_34296_1&content_id=_785609_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:25,904 INFO     [9/23]>>>11634-201810: Assessment for Learning EDG 887 DL2 11634-201810>>>IS DONE
+2017-06-19 14:27:26,276 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_74_1 HTTP/1.1" 200 11051
+2017-06-19 14:27:26,663 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_74_1&content_id=_1230_1&mode=reset HTTP/1.1" 200 16220
+2017-06-19 14:27:26,844 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_74_1&content_id=_1236_1&mode=reset HTTP/1.1" 200 16444
+2017-06-19 14:27:27,019 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_74_1&content_id=_1240_1&mode=reset HTTP/1.1" 200 16257
+2017-06-19 14:27:27,213 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_74_1&content_id=_1242_1&mode=reset HTTP/1.1" 200 16262
+2017-06-19 14:27:27,378 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_74_1&content_id=_1244_1&mode=reset HTTP/1.1" 200 16256
+2017-06-19 14:27:27,540 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_74_1&content_id=_1246_1&mode=reset HTTP/1.1" 200 16260
+2017-06-19 14:27:27,733 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_74_1&content_id=_1248_1&mode=reset HTTP/1.1" 200 16346
+2017-06-19 14:27:27,918 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_74_1&content_id=_1250_1&mode=reset HTTP/1.1" 200 16259
+2017-06-19 14:27:28,085 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_74_1&content_id=_1252_1&mode=reset HTTP/1.1" 200 16338
+2017-06-19 14:27:28,135 INFO     [10/23]>>>Blackboard_Template_6-9-2014: Blackboard Template 6-2014>>>IS DONE
+2017-06-19 14:27:28,492 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_35737_1 HTTP/1.1" 200 14412
+2017-06-19 14:27:28,747 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35737_1&content_id=_835210_1&mode=reset HTTP/1.1" 200 19885
+2017-06-19 14:27:28,818 INFO     [11/23]>>>BUS-422_I_06-19-2017: BUS-422 I D Risk Management and Insurance 201810>>>has no links!
+2017-06-19 14:27:29,203 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_35637_1 HTTP/1.1" 200 11067
+2017-06-19 14:27:29,548 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35637_1&content_id=_822879_1&mode=reset HTTP/1.1" 200 16265
+2017-06-19 14:27:29,734 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35637_1&content_id=_822887_1&mode=reset HTTP/1.1" 200 16479
+2017-06-19 14:27:29,915 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35637_1&content_id=_822890_1&mode=reset HTTP/1.1" 200 16297
+2017-06-19 14:27:30,075 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35637_1&content_id=_822892_1&mode=reset HTTP/1.1" 200 16297
+2017-06-19 14:27:30,244 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35637_1&content_id=_822894_1&mode=reset HTTP/1.1" 200 16297
+2017-06-19 14:27:30,420 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35637_1&content_id=_822896_1&mode=reset HTTP/1.1" 200 16298
+2017-06-19 14:27:30,585 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35637_1&content_id=_822898_1&mode=reset HTTP/1.1" 200 16377
+2017-06-19 14:27:30,742 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35637_1&content_id=_822901_1&mode=reset HTTP/1.1" 200 16299
+2017-06-19 14:27:30,901 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35637_1&content_id=_822903_1&mode=reset HTTP/1.1" 200 16366
+2017-06-19 14:27:30,951 INFO     [12/23]>>>EDG-802_C_06-01-2017: EDG-802 C D Effective Relationships with Families and Communities 201810>>>IS DONE
+2017-06-19 14:27:31,135 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_35638_1 HTTP/1.1" 200 11084
+2017-06-19 14:27:31,509 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35638_1&content_id=_822883_1&mode=reset HTTP/1.1" 200 16533
+2017-06-19 14:27:31,720 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35638_1&content_id=_822918_1&mode=reset HTTP/1.1" 200 16747
+2017-06-19 14:27:31,887 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35638_1&content_id=_822921_1&mode=reset HTTP/1.1" 200 16571
+2017-06-19 14:27:32,134 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35638_1&content_id=_822923_1&mode=reset HTTP/1.1" 200 16572
+2017-06-19 14:27:32,369 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35638_1&content_id=_822925_1&mode=reset HTTP/1.1" 200 16573
+2017-06-19 14:27:32,552 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35638_1&content_id=_822927_1&mode=reset HTTP/1.1" 200 16571
+2017-06-19 14:27:32,750 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35638_1&content_id=_822929_1&mode=reset HTTP/1.1" 200 16645
+2017-06-19 14:27:32,957 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35638_1&content_id=_822932_1&mode=reset HTTP/1.1" 200 16569
+2017-06-19 14:27:33,148 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35638_1&content_id=_822934_1&mode=reset HTTP/1.1" 200 16638
+2017-06-19 14:27:33,196 INFO     [13/23]>>>EDG-803_C_06-01-2017: EDG-803 C D Developmentally Appropriate Assessment Practice in Early Childhood 201810>>>IS DONE
+2017-06-19 14:27:33,513 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_18238_1 HTTP/1.1" 200 14956
+2017-06-19 14:27:33,884 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_18238_1&content_id=_373872_1&mode=reset HTTP/1.1" 200 21718
+2017-06-19 14:27:34,164 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_18238_1&content_id=_373883_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:34,451 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_18238_1&content_id=_373886_1&mode=reset HTTP/1.1" 200 23862
+2017-06-19 14:27:34,769 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_18238_1&content_id=_373888_1&mode=reset HTTP/1.1" 200 23217
+2017-06-19 14:27:35,059 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_18238_1&content_id=_373890_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:35,430 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_18238_1&content_id=_373892_1&mode=reset HTTP/1.1" 200 22806
+2017-06-19 14:27:35,726 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_18238_1&content_id=_373894_1&mode=reset HTTP/1.1" 200 22488
+2017-06-19 14:27:36,022 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_18238_1&content_id=_373896_1&mode=reset HTTP/1.1" 200 25328
+2017-06-19 14:27:36,334 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_18238_1&content_id=_373898_1&mode=reset HTTP/1.1" 200 23247
+2017-06-19 14:27:36,469 INFO     [14/23]>>>EDG-876_C_01-19-2016: EDG-876 C P Literature for Children K-12 201630 04-06-2016>>>IS DONE
+2017-06-19 14:27:36,888 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_35738_1 HTTP/1.1" 200 14412
+2017-06-19 14:27:37,157 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35738_1&content_id=_835213_1&mode=reset HTTP/1.1" 200 19887
+2017-06-19 14:27:37,206 INFO     [15/23]>>>FIN-315_I_06-19-2017: FIN-315 I D Principles of Insurance 201810>>>has no links!
+2017-06-19 14:27:37,408 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_35486_1 HTTP/1.1" 200 10783
+2017-06-19 14:27:37,732 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35486_1&content_id=_813486_1&mode=reset HTTP/1.1" 200 15974
+2017-06-19 14:27:37,957 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35486_1&content_id=_813491_1&mode=reset HTTP/1.1" 200 17509
+2017-06-19 14:27:38,141 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35486_1&content_id=_813494_1&mode=reset HTTP/1.1" 200 15997
+2017-06-19 14:27:38,322 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35486_1&content_id=_813496_1&mode=reset HTTP/1.1" 200 15995
+2017-06-19 14:27:38,549 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35486_1&content_id=_813498_1&mode=reset HTTP/1.1" 200 15997
+2017-06-19 14:27:38,713 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35486_1&content_id=_813500_1&mode=reset HTTP/1.1" 200 15997
+2017-06-19 14:27:38,898 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35486_1&content_id=_813502_1&mode=reset HTTP/1.1" 200 16078
+2017-06-19 14:27:39,058 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35486_1&content_id=_813505_1&mode=reset HTTP/1.1" 200 16000
+2017-06-19 14:27:39,220 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35486_1&content_id=_813507_1&mode=reset HTTP/1.1" 200 16070
+2017-06-19 14:27:39,273 INFO     [16/23]>>>Jannas_Sandbox: Janna's Sandbox>>>IS DONE
+2017-06-19 14:27:39,608 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_33801_1 HTTP/1.1" 200 15063
+2017-06-19 14:27:39,996 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33801_1&content_id=_762841_1&mode=reset HTTP/1.1" 200 21863
+2017-06-19 14:27:40,289 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33801_1&content_id=_785301_1&mode=reset HTTP/1.1" 200 24924
+2017-06-19 14:27:40,569 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33801_1&content_id=_785307_1&mode=reset HTTP/1.1" 200 24457
+2017-06-19 14:27:40,848 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33801_1&content_id=_785311_1&mode=reset HTTP/1.1" 200 24258
+2017-06-19 14:27:41,130 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33801_1&content_id=_785316_1&mode=reset HTTP/1.1" 200 None
+2017-06-19 14:27:41,404 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33801_1&content_id=_785321_1&mode=reset HTTP/1.1" 200 23414
+2017-06-19 14:27:41,640 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33801_1&content_id=_785326_1&mode=reset HTTP/1.1" 200 22793
+2017-06-19 14:27:41,931 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33801_1&content_id=_785331_1&mode=reset HTTP/1.1" 200 25490
+2017-06-19 14:27:42,211 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33801_1&content_id=_785336_1&mode=reset HTTP/1.1" 200 23517
+2017-06-19 14:27:42,335 INFO     [17/23]>>>11630-201810: Literature for Children K-12 EDG 876 DL1 11630-201810>>>IS DONE
+2017-06-19 14:27:42,523 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_33555_1 HTTP/1.1" 200 11119
+2017-06-19 14:27:42,924 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33555_1&content_id=_755188_1&mode=reset HTTP/1.1" 200 18158
+2017-06-19 14:27:43,220 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33555_1&content_id=_766808_1&mode=reset HTTP/1.1" 200 21940
+2017-06-19 14:27:43,486 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33555_1&content_id=_766815_1&mode=reset HTTP/1.1" 200 20099
+2017-06-19 14:27:43,720 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33555_1&content_id=_766821_1&mode=reset HTTP/1.1" 200 19063
+2017-06-19 14:27:43,980 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33555_1&content_id=_766826_1&mode=reset HTTP/1.1" 200 19046
+2017-06-19 14:27:44,221 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33555_1&content_id=_766832_1&mode=reset HTTP/1.1" 200 19581
+2017-06-19 14:27:44,440 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33555_1&content_id=_766837_1&mode=reset HTTP/1.1" 200 18683
+2017-06-19 14:27:44,671 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33555_1&content_id=_766842_1&mode=reset HTTP/1.1" 200 18919
+2017-06-19 14:27:44,930 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33555_1&content_id=_766847_1&mode=reset HTTP/1.1" 200 19288
+2017-06-19 14:27:44,996 INFO     [18/23]>>>mba-879_I_03-16-2017: MBA-879 I D Strategic Innovation 201730>>>IS DONE
+2017-06-19 14:27:45,221 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_35736_1 HTTP/1.1" 200 14407
+2017-06-19 14:27:45,540 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35736_1&content_id=_835206_1&mode=reset HTTP/1.1" 200 19886
+2017-06-19 14:27:45,608 INFO     [19/23]>>>MBA-922_I_06-19-2017: MBA-922 I D Risk Management and Insurance 201810>>>has no links!
+2017-06-19 14:27:45,980 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_17027_1 HTTP/1.1" 200 10983
+2017-06-19 14:27:46,323 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_17027_1&content_id=_280492_1&mode=reset HTTP/1.1" 200 16979
+2017-06-19 14:27:46,596 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_17027_1&content_id=_283215_1&mode=reset HTTP/1.1" 200 20090
+2017-06-19 14:27:46,867 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_17027_1&content_id=_283218_1&mode=reset HTTP/1.1" 200 18974
+2017-06-19 14:27:47,329 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_17027_1&content_id=_283220_1&mode=reset HTTP/1.1" 200 18996
+2017-06-19 14:27:47,611 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_17027_1&content_id=_283222_1&mode=reset HTTP/1.1" 200 19869
+2017-06-19 14:27:47,911 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_17027_1&content_id=_283224_1&mode=reset HTTP/1.1" 200 19707
+2017-06-19 14:27:48,255 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_17027_1&content_id=_283226_1&mode=reset HTTP/1.1" 200 19240
+2017-06-19 14:27:48,552 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_17027_1&content_id=_283228_1&mode=reset HTTP/1.1" 200 18496
+2017-06-19 14:27:48,822 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_17027_1&content_id=_283230_1&mode=reset HTTP/1.1" 200 17621
+2017-06-19 14:27:48,911 INFO     [20/23]>>>MMC-840_I_10-13-2015: MMC-840 I P Public Speaking: Reports and Presentations 201610>>>IS DONE
+2017-06-19 14:27:49,229 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_33582_1 HTTP/1.1" 200 11084
+2017-06-19 14:27:49,631 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757365_1&mode=reset HTTP/1.1" 200 17509
+2017-06-19 14:27:49,871 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757421_1&mode=reset HTTP/1.1" 200 18834
+2017-06-19 14:27:50,232 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757428_1&mode=reset HTTP/1.1" 200 21485
+2017-06-19 14:27:50,579 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757433_1&mode=reset HTTP/1.1" 200 21307
+2017-06-19 14:27:50,825 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757438_1&mode=reset HTTP/1.1" 200 17597
+2017-06-19 14:27:51,062 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757441_1&mode=reset HTTP/1.1" 200 19298
+2017-06-19 14:27:51,361 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757446_1&mode=reset HTTP/1.1" 200 19458
+2017-06-19 14:27:51,663 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757453_1&mode=reset HTTP/1.1" 200 19359
+2017-06-19 14:27:51,953 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757458_1&mode=reset HTTP/1.1" 200 17296
+2017-06-19 14:27:52,142 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757461_1&mode=reset HTTP/1.1" 200 15883
+2017-06-19 14:27:52,371 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_33582_1&content_id=_757463_1&mode=reset HTTP/1.1" 200 18644
+2017-06-19 14:27:52,441 INFO     [21/23]>>>OT-540_C_03-22-2017: OT-540 C P TMOT Scientific Inquiry I 201730 03-22-2017>>>IS DONE
+2017-06-19 14:27:52,627 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_24756_1 HTTP/1.1" 200 11059
+2017-06-19 14:27:52,979 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_609489_1&mode=reset HTTP/1.1" 200 17468
+2017-06-19 14:27:53,286 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757498_1&mode=reset HTTP/1.1" 200 20014
+2017-06-19 14:27:53,589 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757505_1&mode=reset HTTP/1.1" 200 21053
+2017-06-19 14:27:53,897 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757511_1&mode=reset HTTP/1.1" 200 20320
+2017-06-19 14:27:54,122 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757517_1&mode=reset HTTP/1.1" 200 17648
+2017-06-19 14:27:54,367 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757519_1&mode=reset HTTP/1.1" 200 19278
+2017-06-19 14:27:54,628 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757524_1&mode=reset HTTP/1.1" 200 19536
+2017-06-19 14:27:54,898 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757529_1&mode=reset HTTP/1.1" 200 19563
+2017-06-19 14:27:55,292 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757535_1&mode=reset HTTP/1.1" 200 22501
+2017-06-19 14:27:55,503 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757542_1&mode=reset HTTP/1.1" 200 15854
+2017-06-19 14:27:55,770 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_24756_1&content_id=_757544_1&mode=reset HTTP/1.1" 200 19828
+2017-06-19 14:27:55,838 INFO     [22/23]>>>OT-603_C_10-11-2016: OT-603 C P TMOT Practice Management 201710>>>IS DONE
+2017-06-19 14:27:56,009 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/courseMenu.jsp?course_id=_35520_1 HTTP/1.1" 200 11120
+2017-06-19 14:27:56,298 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35520_1&content_id=_817068_1&mode=reset HTTP/1.1" 200 16580
+2017-06-19 14:27:56,502 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35520_1&content_id=_817081_1&mode=reset HTTP/1.1" 200 18151
+2017-06-19 14:27:56,694 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35520_1&content_id=_817087_1&mode=reset HTTP/1.1" 200 17338
+2017-06-19 14:27:56,997 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35520_1&content_id=_817091_1&mode=reset HTTP/1.1" 200 20142
+2017-06-19 14:27:57,240 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35520_1&content_id=_817097_1&mode=reset HTTP/1.1" 200 18203
+2017-06-19 14:27:57,438 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35520_1&content_id=_817101_1&mode=reset HTTP/1.1" 200 18523
+2017-06-19 14:27:57,638 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35520_1&content_id=_817105_1&mode=reset HTTP/1.1" 200 16818
+2017-06-19 14:27:57,934 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35520_1&content_id=_817107_1&mode=reset HTTP/1.1" 200 17164
+2017-06-19 14:27:58,312 DEBUG    https://concordia.blackboard.com:443 "GET /webapps/blackboard/content/listContent.jsp?course_id=_35520_1&content_id=_817108_1&mode=reset HTTP/1.1" 200 17989
+2017-06-19 14:27:58,371 INFO     [23/23]>>>SWTraining_I_05-17-2017: Student Worker Training Course - Janna>>>IS DONE
