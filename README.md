@@ -54,7 +54,12 @@ In order to keep the URL status info, I decided to use Pandas DataFrame. In addi
  - Before running the program, make sure the 'Edit Mode is:' OFF.
  
 # URL batch checking
-
+Check URLs and find out the broken links.
+  - go to the folder '\bb_batch', double click the file 'urlChecker_UI.py'.
+  - login, you should see all the courses that have enrolled in.
+  - double click to select courses that need to be checked.
+  - click 'Check URLs' button; that's all you need to do;
+  - the program will generate 3 CSV files: _broken.csv, _check.csv, _OK.csv
 # Specific URLs filtering
 Go through all courses on the blackboard and find out the specific links (like proquest.com links).
   - go to the folder '\bb_find_specific_urls', double click the file 'urlChecker_UI.py'.
