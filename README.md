@@ -62,7 +62,7 @@ Check URLs and find out the broken links.
   - the program will generate 3 CSV files: _broken.csv, _check.csv, _OK.csv
 # Specific URLs filtering
 Go through all courses on the blackboard and find out the specific links (like proquest.com links).
-  - go to the folder '\bb_find_specific_urls', double click the file 'urlChecker_UI.py'.
+  - go to the folder '\bb_find_specific_urls', double click the file 'RUN.py'.
   - login, you should see all the courses that have enrolled in.
   - click 'Check URLs' button; that's all you need to do;
   - the program will generate a CSV file which include all the specific links you wanted. CSV file has header: Course name, Location(where the link locate), Hyperlink title, URL
