@@ -4,9 +4,8 @@ Checking urls in Blackboard
 1. python 2.7 64bit
 2. pip install python-qt5
 3. pip install pandas
-4. pip install numpy
-5. pip install requests
-6. pip install webbrowser (sometimes, it is already included in the python basic)
+4. pip install requests
+5. pip install webbrowser (sometimes, it is already included in the python basic)
 # Run the program
 1. Double click "pyqt_bb.py" will start the program. 
    - Then input your Blackboard username and password, click 'Load Courses' button. 
@@ -53,3 +52,18 @@ In order to keep the URL status info, I decided to use Pandas DataFrame. In addi
  - Make sure you have enrolled in the course you want to check URLs.
  - Make sure the course list in your Blackboard are NOT 'Group by Term'. 
  - Before running the program, make sure the 'Edit Mode is:' OFF.
+ 
+# URL batch checking
+Check URLs and find out the broken links.
+  - go to the folder '\bb_batch', double click the file 'urlChecker_UI.py'.
+  - login, you should see all the courses that have enrolled in.
+  - double click to select courses that need to be checked.
+  - click 'Check URLs' button; that's all you need to do;
+  - the program will generate 3 CSV files: _broken.csv, _check.csv, _OK.csv
+# Specific URLs filtering
+Go through all courses on the blackboard and find out the specific links (like proquest.com links).
+  - go to the folder '\bb_find_specific_urls', double click the file 'urlChecker_UI.py'.
+  - login, you should see all the courses that have enrolled in.
+  - click 'Check URLs' button; that's all you need to do;
+  - the program will generate a CSV file which include all the specific links you wanted. CSV file has header: Course name, Location(where the link locate), Hyperlink title, URL
+  - it will generate a log file as well. 
