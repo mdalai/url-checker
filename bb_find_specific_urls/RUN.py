@@ -4,7 +4,7 @@ from bb import Blackboard
 import requests
 import pandas as pd
 import numpy as np
-import pickle
+#import pickle
 
 import bb_login
 from file_io import appendDFToCSV

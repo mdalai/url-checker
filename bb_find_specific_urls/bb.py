@@ -171,23 +171,32 @@ class Blackboard(object):
             return []
 
         for li in soup.find(id="content_listContainer").findAll("li", recursive=False):
-            # if it is folder
-            if li.find("img")['src'][-13:] == 'folder_on.gif' and li.find("div").find("h3").find("a"):
-                wk = li.find("div").find("h3").find("a").find("span").contents[0] 
-                # get the Content ID from URL
-                contentid = self._getContentIdFromUrl(li.find("div").find("h3").find("a")['href'])
-                # get links from the folder
-                self.openFolderGetUrlsName(courseid, contentid, wk)
+            try:                
+                # if it is folder
+                if li.find("img")['src'][-13:] == 'folder_on.gif' and li.find("div").find("h3").find("a"):
+                    wk = li.find("div").find("h3").find("a").find("span").contents[0] 
+                    # get the Content ID from URL
+                    contentid = self._getContentIdFromUrl(li.find("div").find("h3").find("a")['href'])
+                    # get links from the folder
+                    self.openFolderGetUrlsName(courseid, contentid, wk)
 
-            # else if it is File, Test, Discussion,Dropbox ...
-            else:
-                name = u'\\'.join([unicode("ROOT"), 
-                unicode(li.find("div").find("h3").find("span",{"style":"color:#000000;"}).contents[0])])
-                #print name
-                page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
-                links2= get_all_links_and_name(page)
-                if links2:
-                    self.urlList.append([name, links2])
+                # else if it is File, Test, Discussion,Dropbox ...
+                else:
+                    if li.find("div").find("h3").find("span",{"style":"color:#000000;"}).contents[0]:
+                        name = u'\\'.join([unicode("ROOT"),
+                                           unicode(li.find("div").find("h3").find("span",{"style":"color:#000000;"}).contents[0])])
+                    else:
+                        name = "ROOT-XXXXX"
+
+                    #print name
+                    page = str(li.find("div",{"class":"vtbegenerated"})) # must convert Soup to string
+                    links2= get_all_links_and_name(page)
+                    if links2:
+                        self.urlList.append([name, links2])
+            except Exception as e:
+                #print "ERROR"
+                print "Error:", e
+                continue 
 
         return self.urlList
 
