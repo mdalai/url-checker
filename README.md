@@ -1,19 +1,25 @@
 # url-checker
-Checking urls in Blackboard
-# Installation:
+Automate URLs checking process on the Blackboard courses. So far there are three main functions which include Single Course URLs checking, Multiple Courses URLs checking and Specific URL identifying.
+## Installation Requirements:
 1. python 2.7 64bit
 2. pip install python-qt5
 3. pip install pandas
 4. pip install requests
 5. pip install webbrowser (sometimes, it is already included in the python basic)
-# Run the program
+## How to use it
+### Single Course URLs checking
 1. Double click "pyqt_bb.py" will start the program. 
    - Then input your Blackboard username and password, click 'Load Courses' button. 
    - From the course list choose a course you want to check URLs, then click 'Check URLs' button. 
    - The new window will be openned and list out all the URLs and statuses. It may take longer time if the course has many URLs.
 2. Or you can run the program on the command line. 
    - python pyqt_bb.py
-  
+   
+### Multiple Courses URLs checking
+
+### Specific URL identifying
+
+<br>
 # Revealing Programming Process
 ## Login
 
