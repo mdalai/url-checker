@@ -19,7 +19,8 @@ Automate URLs checking process on the Blackboard courses. So far there are three
 
 ### Specific URL identifying
 
-<br>
+-------
+
 # Revealing Programming Process
 ## Login
 
