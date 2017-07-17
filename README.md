@@ -7,8 +7,12 @@ This projec is built for the purpose of automating URLs checking process on the 
 3. pip install pandas
 4. pip install requests
 5. pip install webbrowser (sometimes, it is already included in the python basic)
-### Configure Youtube API Key:
-edit the variable, GOOGLE_API_KEY, in "common/url_status.py".
+### Configure:
+Edit the GOOGLE_API_KEY variable in "common/url_status.py".
+```
+## Your Google API key, get one on Google Console 
+GOOGLE_API_KEY = ""
+```
 ## How to use it
 ### Single Course URLs checking
 It can do followings:
