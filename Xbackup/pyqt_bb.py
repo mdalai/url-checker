@@ -111,25 +111,16 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
     	QtWidgets.QApplication.setOverrideCursor(QtGui.QCursor(QtCore.Qt.WaitCursor))
     	
     	#print course_id
-    	#links = self.bb.getURLs(course_id)
+    	links = self.bb.getURLs(course_id)
     	#---------- Test Start ---------------------------------
     	#with open('urlTest.txt', 'rb') as f:
-    		links = pickle.load(f)
+    	#	links = pickle.load(f)
     	'''links = [['root',['https://www.youtube.com/watch?v=YdtLELVhEQg',
                            'https://www.youtube.com/watch?v=esPRsT-lmw8',
-                           'http://www.edudemic.com/education-technology-blogs/',
-                          'http://www.twiducate.com',
-                          'http://www.geeksquad.com/do-it-yourself/tech-tip/six-steps-to-keeping-your-data-safe.aspx',
-                          'https://nisd.net/digitalcitizen/',
-                          'http://www.dfwhcfoundation.org/wp-content/uploads/2013/10/Cultural-and-linguistic-competence-in-Patient-care_Sushma-Sharma-1.jpg',
-                          'http://www.screencast.com/t/qulGmiidirT',
-                          'http://sl.dpi.wi.gov/files/cal/pdf/sl-stds.pdf']]
+                           'http://youtu.be/sRc9Noz80ko']]
                 ]'''
 
     	#---------- Test End ---------------------------------
-    	print "<------ Begin Extracting Links ------------"
-        print links
-        print "------- End Extracing Links -------------->"
         if links == []:
             QtWidgets.QMessageBox.about(self, "My message box", "Returns no link. Please check the CONTENT in the Blackboard!!" )
             # has to close the wait curser, otherwise it will keep showing the curser that is running.
@@ -142,11 +133,8 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
     	df = pd.DataFrame(columns=('Location','URL','Status_code','Remark','flag'))
     	for urls in links:
     	  for url in urls[1]:
-            print "<------ Begin Checking the URL ------------"
-            print urls[0],"-->",url
             if url.find("youtube.com") == -1 and url.find("youtu.be/") == -1:                                    
     	      status_code, comment, flag = self.bb.urlStatus_code(url)
-    	      print "NoY2B status",status_code
     	      df = pd.DataFrame(np.array([[urls[0], url, status_code, comment, flag]]),
               columns=['Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
     	    else:
@@ -163,11 +151,9 @@ class MyApp(QtWidgets.QMainWindow, Ui_Window):
 
     	      else:
     		  status = "YOUTUBE Not Found"
-    	      print "Y2B status",status
     	      df = pd.DataFrame(np.array([[urls[0], url, r.status_code, status, flag]]),
               columns=['Location','URL','Status_code','Remark','flag']).append(df, ignore_index=True)
 
-    	    print "------ END Checking the URL ------------>"
 
     	#---- Reverse DF order
     	df = df.iloc[::-1]

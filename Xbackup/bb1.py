@@ -196,26 +196,15 @@ class Blackboard(object):
         #-- flag = 0: No problem, 1: problem, 2: further check
         try:
             response = self.session.head(url, headers={'User-Agent': 'user_agent',})
-            print response.status_code
             if response.status_code == 200 or response.status_code == 403:
                 return response.status_code,"OK",0
             elif response.status_code == 301 or response.status_code == 302:
                 #-- Checking "redirect" situation" ----- 
-                #r2 = self.session.head(url, headers={'User-Agent': 'user_agent',}, allow_redirects=True)
-                #print r2.status_code
-                #if r2.status_code == 400 or r2.status_code == 404 or r2.status_code == 410:
-                #    return response.status_code, r2.status_code, 1
-                #-- if it is internal Blackborad link, pass  OR if it is PDF
-                #if url.find("https://concordia.blackboard.com/") != -1 or r2.headers['Content-Type'] == 'application/pdf' or r2.headers['Content-Type'].find('image/') != -1:
-                #    return response.status_code,"OK",0
-
                 if url.find("https://concordia.blackboard.com/") != -1 or response.headers['Content-Type'] == 'application/pdf' or response.headers['Content-Type'].find('image/') != -1:
                     return response.status_code,"OK",0
 
-                #r = self.session.get(r2.url,headers={'User-Agent': 'user_agent',}, stream=True) # stream makes it faster
                 r = self.session.get(response.url,headers={'User-Agent': 'user_agent',}, stream=True) # stream makes it faster
                 soup = BeautifulSoup(r.text,"html.parser")
-                print soup.title
 
                 #-- if soup returns without TITLE ----
                 if soup.title == None:
@@ -260,7 +249,7 @@ class Blackboard(object):
 
     	#print youtube_id
     	try:
-    	    urlAPI = "https://www.googleapis.com/youtube/v3/videos?part=status&id=%s&key=AIzaSyAOBqTeqHaI1JTXzJNfQOzZZ-rMGmALHBw"%youtube_id
+    	    urlAPI = "https://www.googleapis.com/youtube/v3/videos?part=status&id=%s&key=[YOUR-API-KEY]"%youtube_id
     	    response = urllib.urlopen(urlAPI)
     	    result = json.loads(response.read())
     	    if result["items"] == []:
