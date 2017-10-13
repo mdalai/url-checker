@@ -51,7 +51,7 @@ With this program, you can check URLs for multiple courses at a time.
    * "xx_OK.csv": all links that work normal listed in this file.
 
 ### Specific URL identifying
-I developed this code for the purpose of idendifying specific link from the courses on Blackboard. For example, if we want to find all youtube links from the all courses designed in the blackboard, this is the right tool to use. To use this program, you have to define the specific URL in the code. For instance, to identify all URLs that is from _proquest.com_, I adjust the code as bellow.
+I developed this code for the purpose of idendifying specific link from the courses on Blackboard. For example, if we want to find all youtube links from the all courses designed in the blackboard, this is the right tool to use. To use this program, you have to define the specific URL in the code. For instance, to identify all URLs that is from _proquest.com_, I adjust the code in "run.py" as bellow.
 ```python
                         # check proquest.com
                         if url[1].find('proquest.com') != -1:
