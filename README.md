@@ -63,8 +63,8 @@ I developed this code for the purpose of idendifying specific link from the cour
 2. Input your Blackboard username and password, click 'Load Courses' button. All courses under your username will be loaded. 
 3. Then click 'Check URLs' button :black_square_button:. You can see the progress in the command line window. It should show the info like staring the course, finishing the course etc.
 4. After it is done, a csv file and a log file will be generated in **result** folder :file_folder:. 
-  * csv file: inlcudes following info: location, hyperlink text, URL.
-  * log file: the processing info.
+    * csv file: inlcudes following info: location, hyperlink text, URL.
+    * log file: the processing info.
 
 
 
