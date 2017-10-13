@@ -28,7 +28,7 @@ With this program, you can check URLs for one course at a time.
 **Guide to use the program**:
 1. To start the program, double click "run.py" file under the **Single** folder :file_folder:.
 2. Input your Blackboard username and password, click 'Load Courses' button. This will load all courses under your username from Blackboard. 
-3. From the course list select a course you want to process URLs checking, then click 'Check URLs' button :button:. 
+3. From the course list select a course you want to process URLs checking, then click 'Check URLs' button :black_square_button:. 
    - The new window will be openned and list out all the URLs and statuses. It may take longer time if the course has many URLs.
 2. Or you can run the program on the command line. 
    - python run.py
