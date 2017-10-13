@@ -20,6 +20,7 @@ The GOOGLE_API_KEY can be applied on [Google Cloud Console](https://console.clou
  * Go to _APIs & Services_  
  * Click _ENABLE APIS AND SERVICES_ 
  * Search **Youtube data API v3** and click it then __ENABLE__ it.
+ ```AIzaSyCdV0pGb2s-SEDg0iDBTI8Uk46ZFQTs69Y```
  
  **Note**: The GOOGLE_API_KEY is used to check Youtube URLs.
 
