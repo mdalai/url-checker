@@ -51,22 +51,20 @@ With this program, you can check URLs for multiple courses at a time.
    * "xx_OK.csv": all links that work normal listed in this file.
 
 ### Specific URL identifying
-I developed this program for the purpose of idendifying specific links in the courses. For example, if we want to find all youtube links from the all course design in the blackboard, this is the right tool to use.
-It can do followings:
-* Log into Blackboard account and display all the enrolled coruses.
-* The identifying process will start by clicking the **Check URLs** button. You can see the progress in the command line window. It should show the info like staring a course, ending a course etc.
-* After it is done, a csv file and a lot file will be generated in **result** folder. 
+I developed this code for the purpose of idendifying specific link from the courses on Blackboard. For example, if we want to find all youtube links from the all courses designed in the blackboard, this is the right tool to use. To use this program, you have to define the specific URL in the code. For instance, to identify all URLs that is from _proquest.com_, I adjust the code as bellow.
+```python
+                        # check proquest.com
+                        if url[1].find('proquest.com') != -1:
+                            print "FINDING Proquest.com"
+```
+
+**Guide to use the program**:
+1. To start the program, double click "run.py" file under the **Specific** folder :file_folder:.
+2. Input your Blackboard username and password, click 'Load Courses' button. All courses under your username will be loaded. 
+3. Then click 'Check URLs' button :black_square_button:. You can see the progress in the command line window. It should show the info like staring the course, finishing the course etc.
+4. After it is done, a csv file and a log file will be generated in **result** folder :file_folder:. 
   * csv file: inlcudes following info: location, hyperlink text, URL.
-  * log file: courses progress info.
-#### Run the program
-1. Double click "run.py" under the **Specific** folder :file_folder:.
-   - Then input your Blackboard username and password, click 'Load Courses' button. 
-   - Click 'Check URLs' button to start the URL identifying process. 
-2. Or you can run the program on the command line. 
-   - python run.py
-   - other steps are same as above.
+  * log file: the processing info.
 
-
--------
 
 
