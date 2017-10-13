@@ -1,19 +1,20 @@
 # url-checker
-This projec is built for the purpose of automating URLs checking process on the Blackboard courses. So far there are three main functions which include Single Course URLs checking, Multiple Courses URLs checking and Specific URL identifying.
-## Requirements:
-### Install:
-1. python 2.7 64bit
-2. pip install python-qt5
-3. pip install pandas
-4. pip install requests
-5. pip install webbrowser (sometimes, it is already included in the python basic)
-### Configure:
-Edit the GOOGLE_API_KEY variable in "common/url_status.py".
+Checking URLs on the [Blackboard](http://www.blackboard.com) are tedious. This project is created for the purpose of automating URLs checking work on the Blackboard. This work simplifies instructional designer's job. So far, there are three main functions those are Single Course URLs checking, Multiple Courses URLs checking and Specific URL identifying.
+## Requirements
+### Installation
+1. Download and install [python 2.7 64bit](https://www.python.org/downloads/release/python-2714/). Check your installation by doing ```python --version``` in your command terminal.
+2. Download the [repository](https://github.com/mdalai/url-checker/archive/master.zip), unzip it OR ```git clone https://github.com/mdalai/url-checker.git``` if you are familiar with **git bash**.
+3. Open the command terminal, input following command to install dependencies:
+```sh
+   pip install python-qt5 pandas requests, webbrowser
+```
+### Configuration
+Go into the download code folder and edit the GOOGLE_API_KEY variable in "common/url_status.py". You should apply GOOGLE_API_KEY on [Google Cloud Console](console.cloud.google.com) with your google account. The GOOGLE_API_KEY is used to check Youtube URLs.
 ```
 ## Your Google API key, get one on Google Console 
 GOOGLE_API_KEY = ""
 ```
-## How to use it
+## How to use the program
 ### Single Course URLs checking
 It can do followings:
 * Log into Blackboard account and display all the enrolled coruses.
@@ -21,7 +22,7 @@ It can do followings:
 * By clicking the **Check URLs** button, the new window will be prompted. It displays the list of all URLs within the courses. The display inlcudes following info: location, hyperlink text, URL, status. If the URL is broken, the row will be shown in red color. 
 * Double click the cell with URL, it will open the link in browser. Some of links are hard to trace by programming. These are shown in orange color. This function makes this manual checking process convenient.
 #### Run the program
-1. Double click "run.py" under the ** Singel ** foler.
+1. Double click "run.py" under the **Singel** foler.
    - Then input your Blackboard username and password, click 'Load Courses' button. 
    - From the course list choose a course you want to check URLs, then click 'Check URLs' button. 
    - The new window will be openned and list out all the URLs and statuses. It may take longer time if the course has many URLs.
