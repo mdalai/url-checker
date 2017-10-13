@@ -29,23 +29,12 @@ With this program, you can check URLs for one course at a time.
 1. To start the program, double click "run.py" file under the **Single** folder :file_folder:.
 2. Input your Blackboard username and password, click 'Load Courses' button. This will load all courses under your username from Blackboard. 
 3. From the course list select a course you want to process URLs checking, then click 'Check URLs' button :black_square_button:. 
-   - The new window will be openned and list out all the URLs and statuses. It may take longer time if the course has many URLs.
-2. Or you can run the program on the command line. 
-   - python run.py
-   - other steps are same as above.
-It can do followings:
-* Log into Blackboard account and display all the enrolled coruses.
-* Choose a course which has URLs need to be checked
-* By clicking the **Check URLs** button, the new window will be prompted. It displays the list of all URLs within the courses. The display inlcudes following info: location, hyperlink text, URL, status. If the URL is broken, the row will be shown in red color. 
-* Double click the cell with URL, it will open the link in browser. Some of links are hard to trace by programming. These are shown in orange color. This function makes this manual checking process convenient.
-#### Run the program
-1. Double click "run.py" under the **Singel** foler.
-   - Then input your Blackboard username and password, click 'Load Courses' button. 
-   - From the course list choose a course you want to check URLs, then click 'Check URLs' button. 
-   - The new window will be openned and list out all the URLs and statuses. It may take longer time if the course has many URLs.
-2. Or you can run the program on the command line. 
-   - python run.py
-   - other steps are same as above.
+4. The new window popup, URLs checking work is processing and eventually it will display all URLs with status. This step may take 2-3 minutes if the course has many URLs.
+5. To check displayed URLs list, you need to know:
+  - List include following columns: location, hyperlink text, URL, status.
+  - URL column shows url link. The broken URLs are shown in red color.  The orange one means code is unable to identity if it is broken. You need to further check these URLs. Other ones are normal.
+  - To check the URL, you can just double click the URL cell, it will open the link in the browser.
+
    
 ### Multiple Courses URLs checking
 It can do followings:
