@@ -38,22 +38,18 @@ With this program, you can check URLs for one course at a time.
 
    
 ### Multiple Courses URLs checking
-It can do followings:
-* Log into Blackboard account and display all the enrolled coruses.
-* Choose multiple courses for checking URLs
-* The URL checking process will be treggered by clicking the **Check URLs** button. It might take for a while.
-* After the program done running, 3 csv files will be generated in **result** folder. Each file inlcudes following info: location, hyperlink text, URL, status.
-  * "xx_broken.csv": all broken links are listed in the file.
-  * "xx_check.csv": links that need to be checked furtherly.
-  * "xx_OK.csv": all links that are fine listed in this file.
-#### Run the program
-1. Double click "run.py" under the ** Batch ** foler.
-   - Then input your Blackboard username and password, click 'Load Courses' button. 
-   - List in the left hand side are there to let you choose by double clicking. You will see the course appears in the right hand side by the operation. If you want to delete from a course from the right hand, just double click as well. Finally, click 'Check URLs' button to start the URL checking process. 
-   - It may take longer time if many courses have chosen. Await patiently.
-2. Or you can run the program on the command line. 
-   - python run.py
-   - other steps are same as above.
+With this program, you can check URLs for multiple courses at a time. 
+
+**Guide to use the program**:
+1. To start the program, double click "run.py" file under the **Batch** folder :file_folder:.
+2. Input your Blackboard username and password, click 'Load Courses' button. All courses under your username will be loaded in the left side window. 
+3. To select/delete courses, double click the course row. It will appear/disappear on the right side window.
+4. After selection is done, click 'Check URLs' button :black_square_button: to start the URL checking process. It may takes longer time if many courses have chosen. Await patiently.
+5. After the program done running, 3 csv files will be generated in **result** folder :file_folder:. Each file inlcudes following info: location, hyperlink text, URL, status.
+   * "xx_broken.csv": all broken links are listed in the file.
+   * "xx_check.csv": links that need to be checked furtherly.
+   * "xx_OK.csv": all links that work normal listed in this file.
+
 ### Specific URL identifying
 I developed this program for the purpose of idendifying specific links in the courses. For example, if we want to find all youtube links from the all course design in the blackboard, this is the right tool to use.
 It can do followings:
