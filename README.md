@@ -4,9 +4,10 @@ Checking URLs on the [Blackboard](http://www.blackboard.com) are tedious. This p
 ### Installation
 1. Download and install [python 2.7 64bit](https://www.python.org/downloads/release/python-2714/). Check your installation by doing ```python --version``` in your command terminal.
 2. Download the [repository](https://github.com/mdalai/url-checker/archive/master.zip), unzip it OR ```git clone https://github.com/mdalai/url-checker.git``` if you are familiar with **git bash**.
-3. Open the command terminal, input following command to install dependencies:
+3. Open the command terminal, cd into python folder, usually ```cd C:\Python27\Scripts```, then input following command to install dependencies:
 ```sh
-   pip install python-qt5 pandas requests, webbrowser
+   pip install python-qt5 pandas requests beautifulsoup4 
+   pip install webbrowser
 ```
 ### Configuration
 Go into the download code folder and edit the GOOGLE_API_KEY variable in "common/url_status.py". You should see following line the code file. Put your KEY into the double quotation mark.
