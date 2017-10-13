@@ -9,11 +9,19 @@ Checking URLs on the [Blackboard](http://www.blackboard.com) are tedious. This p
    pip install python-qt5 pandas requests, webbrowser
 ```
 ### Configuration
-Go into the download code folder and edit the GOOGLE_API_KEY variable in "common/url_status.py". You should apply GOOGLE_API_KEY on [Google Cloud Console](https://console.cloud.google.com) with your google account. The GOOGLE_API_KEY is used to check Youtube URLs.
+Go into the download code folder and edit the GOOGLE_API_KEY variable in "common/url_status.py". You should see following line the code file. Put your KEY into the double quotation mark.
 ```
 ## Your Google API key, get one on Google Console 
 GOOGLE_API_KEY = ""
 ```
+The GOOGLE_API_KEY can be applied on [Google Cloud Console](https://console.cloud.google.com) with your google account. 
+ * Login the Google Cloud console
+ * Go to _APIs & Services_  
+ * Click _ENABLE APIS AND SERVICES_ 
+ * Search **Youtube data API vs** and __ENABLE__ it.
+ 
+ The GOOGLE_API_KEY is used to check Youtube URLs.
+
 ## How to use the program
 ### Single Course URLs checking
 It can do followings:
