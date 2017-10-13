@@ -31,9 +31,9 @@ With this program, you can check URLs for one course at a time.
 3. From the course list select a course you want to process URLs checking, then click 'Check URLs' button :black_square_button:. 
 4. The new window popup, URLs checking work is processing and eventually it will display all URLs with status. This step may take 2-3 minutes if the course has many URLs.
 5. To check displayed URLs list, you need to know:
-  - List include following columns: location, hyperlink text, URL, status.
-  - URL column shows url link. The broken URLs are shown in red color.  The orange one means code is unable to identity if it is broken. You need to further check these URLs. Other ones are normal.
-  - To check the URL, you can just double click the URL cell, it will open the link in the browser.
+    - List include following columns: location, hyperlink text, URL, status.
+    - URL column shows url link. The broken URLs are shown in red color.  The orange one means code is unable to identity if it is broken. You need to further check these URLs. Other ones are normal.
+    - To check the URL, you can just double click the URL cell, it will open the link in the browser.
 
    
 ### Multiple Courses URLs checking
