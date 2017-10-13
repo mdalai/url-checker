@@ -25,6 +25,7 @@ The GOOGLE_API_KEY can be applied on [Google Cloud Console](https://console.clou
 ## How to use the program
 ### Single Course URLs checking
 With this program, you can check URLs for one course at a time. 
+
 **Guide to use the program**:
 1. To start the program, double click "run.py" file under the **Single** folder :file_folder:.
 2. Input your Blackboard username and password, click 'Load Courses' button. This will load all courses under your username from Blackboard. 
